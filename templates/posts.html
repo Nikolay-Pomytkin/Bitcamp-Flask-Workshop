@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="row">
+
 {% for post in posts %}
-    <h2>{{ post.user }}</h2>
-    <b> {{ post.text }}</b>
+<div class="col">
+    <div class="card">
+        <div class="card-header"><h2>{{ post.user }}</h2></div>
+        <div class="card-body"><b> {{ post.text }}</b></div>
+    </div>
+</div>
 {% endfor %}
+</div>
+
 {% endblock %}

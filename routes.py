@@ -55,4 +55,14 @@ def profile(username):
 
 @app.route('/feed')
 def feed():
-    return ''
+    posts = [
+        {
+            'user': 'Nikolay',
+            'text': 'So excited to be on the blue team at Bitcamp 2021!'
+        },
+        {
+            'user': 'Nikolay',
+            'text': 'Blue team is SUPREME!'
+        }
+    ]
+    return render_template('posts.html', posts=posts)
