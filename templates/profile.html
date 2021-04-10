@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+    {% if user['name'] == 'nikolay' %}
+        Welcome: Nikolay!
+    {% else %}
+        {{ user['name'] }}
+    {% endif %}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><b>Email: </b> {{user['email']}}</li>
+      <li class="list-group-item"><b>Description: </b> {{user['description']}}</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
